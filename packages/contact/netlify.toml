@@ -1,0 +1,11 @@
+[build]
+  publish = "public/"
+  functions = "functions"
+
+[dev]
+  command = "yarn run gatsby develop"
+
+# [[redirects]]
+#   from = "/api/*"
+#   to = "/.netlify/functions/:splat"
+#   status = 200
