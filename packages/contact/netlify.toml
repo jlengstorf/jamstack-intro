@@ -1,3 +1,7 @@
+[build]
+  functions = 'functions'
+  publish = 'public'
+
 [[redirects]]
   from = '/api/*'
   to = '/.netlify/functions/:splat'

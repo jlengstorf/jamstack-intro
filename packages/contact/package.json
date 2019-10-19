@@ -9,7 +9,9 @@
     "develop": "netlify dev"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "gatsby": "^2.16.3",
+    "mailgun-js": "^0.22.0",
     "nodemailer": "^6.3.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
