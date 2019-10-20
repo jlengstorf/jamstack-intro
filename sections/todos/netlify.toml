@@ -1,0 +1,14 @@
+[build]
+  functions = "functions"
+  publish = "public"
+
+[dev]
+  command = "yarn develop"
+  publish = "public"
+  port = 8888 # port where Netlify Dev runs
+  targetPort = 8000 # port where Gatsby runs
+
+[[redirects]]
+  from = "api/*"
+  to = ".netlify/functions/:splat"
+  status = 200

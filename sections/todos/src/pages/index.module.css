@@ -1,0 +1,32 @@
+html {
+  color: #444;
+  font-family: sans-serif;
+}
+
+.heading {
+  color: #222;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+}
+
+.todos {
+  border-top: 1px solid #ddd;
+  list-style: none;
+  margin: 2rem auto;
+  max-width: 500px;
+  padding: 0;
+}
+
+.todo {
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0.75rem;
+  width: 100%;
+}
