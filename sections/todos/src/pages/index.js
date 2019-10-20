@@ -9,7 +9,7 @@ export default () => {
   const [todos, setTodos] = useState(null);
 
   /*
-   * This pattern comes from David Kourshid. It allows us to avoid what he
+   * This pattern comes from David Khourshid. It allows us to avoid what he
    * calls “juggling hooks” between this and the Form component and allows
    * requests to be cancelable.
    *
