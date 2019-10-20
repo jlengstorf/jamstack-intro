@@ -1,0 +1,57 @@
+html {
+  color: #333;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: #111;
+  color: white;
+  padding: 1rem 5vw;
+}
+
+header a {
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main {
+  margin: 0 auto;
+  width: 90vw;
+}
+
+.dashboard-header {
+  align-items: baseline;
+  background: #ddd;
+  display: flex;
+  font-size: 0.875rem;
+  justify-content: space-between;
+  margin: 0 -5vw;
+  padding: 0.5rem 5vw;
+}
+
+.dashboard-header a {
+  color: #222;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+}
+
+.dashboard-header a:hover:not(.active) {
+  background: #bbb;
+}
+
+.dashboard-header a.active {
+  background: #333;
+  color: white;
+}
+
+h1 {
+  color: #222;
+}
