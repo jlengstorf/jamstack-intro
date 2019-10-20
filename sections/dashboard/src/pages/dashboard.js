@@ -40,9 +40,9 @@ const Dashboard = ({ location }) => {
     <Layout>
       <Profile showModal={showModal} />
       <Router>
+        <Login path="/dashboard/login" openLogin={showModal} />
         <PrivateRoute path="/dashboard/secret" component={SecretStuff} />
         <PrivateRoute path="/dashboard/base" component={AllYourBase} />
-        <Login path="/dashboard/login" openLogin={showModal} />
       </Router>
       <IdentityModal
         showDialog={isVisible}
