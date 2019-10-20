@@ -12,7 +12,7 @@ This is the code for a Frontend Masters workshop. In this workshop, we’ll lear
 - Add a `link` and a `script` element to `index.html`
 - Use the `serve` package to get a local server going
 
-## Section 2: Deploy a JAMstack Site
+### Section 2: Deploy a JAMstack Site
 
 - Set up Netlify CLI `yarn global add netlify-cli`
 - Create a GitHub repository (use Hub) https://hub.github.com `git create <repo-name>`
