@@ -7,10 +7,10 @@ This is the code for a Frontend Masters workshop. In this workshop, we’ll lear
 ### Section 1: Create a Basic JAMstack Site
 
 - Create an `index.html` with a heading and a content area
+- Use `npx serve` to load the site during development
 - Create a `styles.css` with basic styles
 - Create a `main.js` that loads repos from GitHub
 - Add a `link` and a `script` element to `index.html`
-- Use the `serve` package to get a local server going
 
 ### Section 2: Deploy a JAMstack Site
 

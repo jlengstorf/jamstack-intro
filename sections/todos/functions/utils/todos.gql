@@ -1,9 +1,0 @@
-type Todo {
-  text: String!
-  completed: Boolean
-}
-
-type Query {
-  allTodos: [Todo!]!
-  completedTodos(completed: Boolean!): [Todo!]!
-}
