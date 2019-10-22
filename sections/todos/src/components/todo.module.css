@@ -23,3 +23,9 @@
   color: #777;
   text-decoration: line-through;
 }
+
+.delete {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
