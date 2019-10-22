@@ -41,7 +41,7 @@ export default () => {
         <ul className={styles.todos}>
           {todos.map(todo => (
             <li key={todo._id} className={styles.todo}>
-              <Todo todo={todo} />
+              <Todo todo={todo} reloadTodos={reloadTodos} />
             </li>
           ))}
         </ul>
