@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styles from './index.module.css';
+import Form from '../components/form';
 import Todo from '../components/todo';
 
 export default () => {
@@ -30,9 +31,12 @@ export default () => {
     };
   }, [status]);
 
+  const reloadTodos = () => setStatus('loading');
+
   return (
     <main>
       <h1 className={styles.heading}>JAMstack Todos</h1>
+      <Form reloadTodos={reloadTodos} />
       {todos ? (
         <ul className={styles.todos}>
           {todos.map(todo => (
