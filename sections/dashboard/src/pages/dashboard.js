@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { navigate } from "gatsby";
 import { Router } from "@reach/router";
 import Layout from "../components/layout";
@@ -6,21 +6,32 @@ import Profile from "../components/profile";
 import RoutBase from "../components/route-base";
 import RouteSecret from "../components/route-secret";
 import RouteLogin from "../components/route-login";
+import IdentityModal from "react-netlify-identity-widget";
+import PrivateRoute from "../components/private-route";
+
+import "react-netlify-identity-widget/styles.css";
 
 const Dashboard = ({ location }) => {
+  const [isVisible, setVisibility] = useState(false);
   useEffect(() => {
     if (location.pathname.match(/^\/dashboard\/?$/)) {
       navigate("/dashboard/login", { replace: true });
     }
   }, []);
+
+  const showModal = () => setVisibility(true);
   return (
     <Layout>
-      <Profile />
+      <Profile showModal={showModal} />
       <Router>
-        <RoutBase path="/dashboard/base" />
-        <RouteSecret path="/dashboard/secret" />
-        <RouteLogin path="/dashboard/login" />
+        <PrivateRoute path="/dashboard/base" component={RoutBase} />
+        <PrivateRoute path="/dashboard/secret" component={RouteSecret} />
+        <RouteLogin path="/dashboard/login" showModal={showModal} />
       </Router>
+      <IdentityModal
+        showDialog={isVisible}
+        onCloseDialog={() => setVisibility(false)}
+      />
     </Layout>
   );
 };

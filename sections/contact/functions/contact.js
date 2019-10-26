@@ -22,3 +22,5 @@ exports.handler = (event, _context, callback) => {
     });
   });
 };
+
+//2:41 https://frontendmasters.com/workshops/jamstack/
