@@ -1,9 +1,9 @@
 const listRepos = async username => {
-  const repos = await. fetch(
+  const repos = await fetch(
     `https://api.github.com/users/${username}/repos?type=owner&sort=updated`
   )
-  .then(res => res.json())
-  .catch(error => console.error(error));
+    .then(res => res.json())
+    .catch(error => console.error(error));
 
   const markup = repos
     .map(
@@ -14,11 +14,11 @@ const listRepos = async username => {
         </li>
       `
     )
-    .join('');
+    .join("");
 
-    const content = document.getElementById('content');
+  const content = document.getElementById("content");
 
-    content.innerHTML = `<ul>${markup}</ul>`;
+  content.innerHTML = `<ul>${markup}</ul>`;
 };
 
-listRepos;('JackGaark');
+listRepos("jlengstorf");

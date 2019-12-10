@@ -1,0 +1,20 @@
+{
+  "name": "dashboard",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Jason Lengstorf <jason@lengstorf.com> (https://lengstorf.com)",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "@reach/dialog": "^0.3.0",
+    "@reach/tabs": "^0.3.0",
+    "@reach/visually-hidden": "^0.3.0",
+    "gatsby": "^2.17.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-netlify-identity": "^0.1.9",
+    "react-netlify-identity-widget": "^0.2.5"
+  }
+}
