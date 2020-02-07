@@ -60,7 +60,7 @@ Before serverless functions, getting
   - Add a redirect for Netlify
 - Deploy the site to Netlify
   - Required so we can activate Identity
-- Add authentication w/Netlify Dev, Netlify Dev runs on port 8888
+- Add authentication w/Netlify Dev, Netlify Dev runs on port 8888, so access the site through localhost:**8888** (not 8000 like the CLI output says)
   - `yarn add react-netlify-identity-widget react-netlify-identity @reach/dialog @reach/tabs @reach/visually-hidden`
   - Create a `Layout` component that wraps everything with the provider
   - Add the Identity modal to the dashboard page
