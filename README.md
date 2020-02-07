@@ -60,7 +60,7 @@ Before serverless functions, getting
   - Add a redirect for Netlify
 - Deploy the site to Netlify
   - Required so we can activate Identity
-- Add authentication w/Netlify Dev, Netlify Dev runs on port 8888, so access the site through localhost:**8888** (not 8000 like the CLI output says)
+- Add authentication w/Netlify Dev, `netlify dev` runs on port 8888, so access the site through localhost:**8888**
   - `yarn add react-netlify-identity-widget react-netlify-identity @reach/dialog @reach/tabs @reach/visually-hidden`
   - Create a `Layout` component that wraps everything with the provider
   - Add the Identity modal to the dashboard page
@@ -82,6 +82,7 @@ Before serverless functions, getting
 - Create an API server key in the “security” tab
 - Add the server key to `.env`
 - Create a helper for serverless functions (`functions/utils/send-query.js`)
+- `netlify dev` runs on port 8888, so access the site through localhost:**8888** (not 8000)
 - Load all todos
   - Create a serverless function `/functions/get-all-todos.js`
   - Write a hook to load todos
