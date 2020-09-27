@@ -1,8 +1,24 @@
 {
   "name": "myjamstacksite",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "repository": "git@github.com:skgyan/jamstack-intro.git",
   "author": "skgyan <skgyan@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./sections/basic/index.html --open",
+    "build": "parcel build ./sections/basic/index.html"
+  },
+  "dependencies": {
+    "netlify-cli": "^2.63.3",
+    "package.json": "^2.0.1"    
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": [
+    "javascript",
+    "starter"
+  ]
 }
