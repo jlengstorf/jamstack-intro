@@ -1,0 +1,8 @@
+{
+  "name": "myjamstacksite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:skgyan/jamstack-intro.git",
+  "author": "skgyan <skgyan@gmail.com>",
+  "license": "MIT"
+}
