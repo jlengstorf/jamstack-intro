@@ -1,13 +1,19 @@
-import React, { useEffect } from "react";
-import { navigate } from "gatsby";
 import { Router } from "@reach/router";
+import { navigate } from "gatsby";
+import React, { useEffect, useState } from "react";
+import { IdentityModal } from "react-netlify-identity-widget";
+import "react-netlify-identity-widget/styles.css";
 import Layout from "../components/layout";
+import PrivateRoute from "../components/private-route";
 import Profile from "../components/profile";
 import RouteBase from "../components/route-base";
-import RouteSecret from "../components/route-secret";
 import RouteLogin from "../components/route-login";
+import RouteSecret from "../components/route-secret";
 
 const Dashboard = ({ location }) => {
+  const [isVisible, setVisibility] = useState(false);
+  const toggleModal = () => setVisibility(!isVisible);
+
   useEffect(() => {
     if (location.pathname.match(/^\/dashboard\/?$/)) {
       navigate("/dashboard/login", { replace: true });
@@ -16,13 +22,13 @@ const Dashboard = ({ location }) => {
 
   return (
     <Layout>
-      <Profile />
+      <Profile toggleModal={toggleModal} />
       <Router>
-        <RouteBase path="/dashboard/base" />
-        <RouteSecret path="/dashboard/secret" />
-        <RouteLogin path="/dashboard/login" />
+        <PrivateRoute path="/dashboard/base" component={RouteBase} />
+        <PrivateRoute path="/dashboard/secret" component={RouteSecret} />
+        <RouteLogin path="/dashboard/login" toggleModal={toggleModal} />
       </Router>
-      <p>TODO: create a dashboard</p>
+      <IdentityModal showDialog={isVisible} onCloseDialog={toggleModal} />
     </Layout>
   );
 };

@@ -5,11 +5,17 @@
   "author": "Vaibhav Singh <0vaibhavsingh0@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@reach/dialog": "^0.13.0",
+    "@reach/tabs": "^0.13.0",
+    "@reach/visually-hidden": "^0.13.0",
     "gatsby": "^2.32.3",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-netlify-identity": "^0.2.5",
+    "react-netlify-identity-widget": "^0.2.7"
   },
   "scripts": {
-    "develop": "gatsby develop"
+    "develop": "gatsby develop",
+    "build": "gatsby build"
   }
 }
